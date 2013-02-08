@@ -1,0 +1,31 @@
+<settings>
+        <profiles>
+                <profile>
+                        <id>cloudsmith</id>
+                        <repositories>
+                                <repository>
+                                        <id>cloudsmith</id>
+                                        <url>http://am0.cloudsmith.com/nexus/content/groups/public</url>
+                                        <releases>
+                                                <enabled>true</enabled>
+                                        </releases>
+                                        <snapshots>
+                                                <enabled>true</enabled>
+                                        </snapshots>
+                                </repository>
+                        </repositories>
+                        <pluginRepositories>
+                                <pluginRepository>
+                                        <id>cloudsmith</id>
+                                        <url>http://am0.cloudsmith.com/nexus/content/groups/public</url>
+                                        <releases>
+                                                <enabled>true</enabled>
+                                        </releases>
+                                        <snapshots>
+                                                <enabled>true</enabled>
+                                        </snapshots>
+                                </pluginRepository>
+                        </pluginRepositories>
+                </profile>
+        </profiles>
+</settings>

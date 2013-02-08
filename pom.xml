@@ -14,8 +14,8 @@
 				<version>0.0.1-SNAPSHOT</version>
 				<executions>
 					<execution>
-						<id>validate</id>
-						<phase>compile</phase>
+						<id>default-validate</id>
+						<phase>validate</phase>
 						<goals>
 							<goal>validate</goal>
 						</goals>
@@ -25,7 +25,7 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>publish</id>
+						<id>default-install</id>
 						<phase>install</phase>
 						<goals>
 							<goal>publish</goal>
@@ -36,10 +36,10 @@
 					</execution>
 				</executions>
 				<configuration>
-					<login>${publisher.login}</login>
-					<password>${publisher.password}</password>
+					<login>${env.PUBLISHER_LOGIN}</login>
+					<password>${env.PUBLISHER_PASSWORD}</password>
 					<serviceURL>http://forgeserver.tada.se/</serviceURL>
-					<modulesRoot>..</modulesRoot>
+					<modulesRoot>${basedir}/..</modulesRoot>
 				</configuration>
 			</plugin>
 		</plugins>
