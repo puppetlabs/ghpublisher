@@ -2,4 +2,4 @@
 #
 # Perform GitHub publish
 cd $(dirname $0)
-mvn --settings settings.xml --debug validate
+mvn -s settings.xml validate
