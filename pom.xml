@@ -4,43 +4,30 @@
 	<groupId>org.cloudsmith.geppetto</groupId>
 	<artifactId>org.cloudsmith.geppetto.publisher</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>forge-module</packaging>
 	<name>org.cloudsmith.geppetto.publisher</name>
+	
+	<properties>
+		<forge.login>${env.PUBLISHER_LOGIN}</forge.login>
+		<forge.password>${env.PUBLISHER_PASSWORD}</forge.password>
+		<forge.modules.root>${basedir}/..</forge.modules.root>
+	</properties>
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.cloudsmith.geppetto</groupId>
 				<artifactId>forge-maven-plugin</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
+				<version>3.0.3-SNAPSHOT</version>
+				<extensions>true</extensions>
 				<executions>
 					<execution>
-						<id>default-validate</id>
-						<phase>validate</phase>
-						<goals>
-							<goal>validate</goal>
-						</goals>
 						<configuration>
 							<enablePuppetLintValidation>false</enablePuppetLintValidation>
-							<enableGeppettoValidation>false</enableGeppettoValidation>
-						</configuration>
-					</execution>
-					<execution>
-						<id>default-install</id>
-						<phase>install</phase>
-						<goals>
-							<goal>publish</goal>
-						</goals>
-						<configuration>
-							<dryRun>false</dryRun>
+							<cacheLocation>${project.build.directory}/forgeCache</cacheLocation>
 						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<login>${env.PUBLISHER_LOGIN}</login>
-					<password>${env.PUBLISHER_PASSWORD}</password>
-					<serviceURL>http://forgeserver.tada.se/</serviceURL>
-					<modulesRoot>${basedir}/..</modulesRoot>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
