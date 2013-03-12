@@ -4,13 +4,12 @@
 	<groupId>org.cloudsmith.geppetto</groupId>
 	<artifactId>org.cloudsmith.geppetto.publisher</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>forge-module</packaging>
+	<packaging>puppet-module</packaging>
 	<name>org.cloudsmith.geppetto.publisher</name>
 	
 	<properties>
 		<forge.login>${env.PUBLISHER_LOGIN}</forge.login>
 		<forge.password>${env.PUBLISHER_PASSWORD}</forge.password>
-		<forge.modules.root>${basedir}/..</forge.modules.root>
 	</properties>
 
 	<build>
