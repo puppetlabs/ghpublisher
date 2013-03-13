@@ -2,11 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.cloudsmith.geppetto</groupId>
-	<artifactId>org.cloudsmith.geppetto.publisher</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>ghpublisher</artifactId>
+	<version>1.0.0-alpha</version>
 	<packaging>puppet-module</packaging>
 	<name>org.cloudsmith.geppetto.publisher</name>
-	
+
 	<properties>
 		<forge.login>${env.PUBLISHER_LOGIN}</forge.login>
 		<forge.password>${env.PUBLISHER_PASSWORD}</forge.password>
@@ -17,16 +17,12 @@
 			<plugin>
 				<groupId>org.cloudsmith.geppetto</groupId>
 				<artifactId>forge-maven-plugin</artifactId>
-				<version>3.0.3-SNAPSHOT</version>
+				<version>3.0.3-alpha</version>
 				<extensions>true</extensions>
-				<executions>
-					<execution>
-						<configuration>
-							<enablePuppetLintValidation>false</enablePuppetLintValidation>
-							<cacheLocation>${project.build.directory}/forgeCache</cacheLocation>
-						</configuration>
-					</execution>
-				</executions>
+				<configuration>
+					<enablePuppetLintValidation>false</enablePuppetLintValidation>
+					<cacheLocation>${project.build.directory}/forgeCache</cacheLocation>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
