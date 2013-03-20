@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.cloudsmith.geppetto</groupId>
 	<artifactId>ghpublisher</artifactId>
-	<version>1.0.0-alpha</version>
+	<version>1.0.0-beta-SNAPSHOT</version>
 	<packaging>puppet-module</packaging>
 	<name>org.cloudsmith.geppetto.publisher</name>
 
@@ -17,7 +17,7 @@
 			<plugin>
 				<groupId>org.cloudsmith.geppetto</groupId>
 				<artifactId>forge-maven-plugin</artifactId>
-				<version>3.0.3-alpha</version>
+				<version>3.0.3-beta-SNAPSHOT</version>
 				<extensions>true</extensions>
 				<configuration>
 					<enablePuppetLintValidation>false</enablePuppetLintValidation>

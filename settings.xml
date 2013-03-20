@@ -8,24 +8,24 @@
                         <repositories>
                                 <repository>
                                         <id>cloudsmith</id>
-                                        <url>https://am0.cloudsmith.com/nexus/content/repositories/releases/</url>
+                                        <url>https://am0.cloudsmith.com/nexus/content/repositories/snapshots/</url>
                                         <releases>
-                                                <enabled>true</enabled>
+                                                <enabled>false</enabled>
                                         </releases>
                                         <snapshots>
-                                                <enabled>false</enabled>
+                                                <enabled>true</enabled>
                                         </snapshots>
                                 </repository>
                         </repositories>
                         <pluginRepositories>
                                 <pluginRepository>
                                         <id>cloudsmith</id>
-                                        <url>https://am0.cloudsmith.com/nexus/content/repositories/releases/</url>
+                                        <url>https://am0.cloudsmith.com/nexus/content/repositories/snapshots/</url>
                                         <releases>
-                                                <enabled>true</enabled>
+                                                <enabled>false</enabled>
                                         </releases>
                                         <snapshots>
-                                                <enabled>false</enabled>
+                                                <enabled>true</enabled>
                                         </snapshots>
                                 </pluginRepository>
                         </pluginRepositories>
