@@ -1,11 +1,11 @@
 <settings>
 	<profiles>
 		<profile>
-			<id>cloudsmith</id>
+			<id>puppetlabs</id>
 			<repositories>
 				<repository>
-					<id>cloudsmith</id>
-					<url>https://am0.cloudsmith.com/nexus/content/repositories/releases/</url>
+					<id>puppetlabs</id>
+					<url>https://geppetto-nexus.puppetlabs.com/content/repositories/releases/</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
@@ -16,8 +16,8 @@
 			</repositories>
 			<pluginRepositories>
 				<pluginRepository>
-					<id>cloudsmith</id>
-					<url>https://am0.cloudsmith.com/nexus/content/repositories/releases/</url>
+					<id>puppetlabs</id>
+					<url>https://geppetto-nexus.puppetlabs.com/content/repositories/releases/</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
@@ -29,6 +29,6 @@
 		</profile>
 	</profiles>
 	<activeProfiles>
-		<activeProfile>cloudsmith</activeProfile>
+		<activeProfile>puppetlabs</activeProfile>
 	</activeProfiles>
 </settings>
