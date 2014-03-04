@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Perform GitHub publish
 MODULES_ROOT=`pwd`
 cd $(dirname $0)
+set -o pipefail
 mvn -s settings.xml -Dforge.modules.root="$MODULES_ROOT" compile | egrep --color=never "(^\[WARNING\]|^\[ERROR\])"
