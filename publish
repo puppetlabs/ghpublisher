@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Perform GitHub publish
 if [ -z "$PUBLISHER_LOGIN" ]
@@ -15,4 +15,6 @@ fi
 
 MODULES_ROOT=`pwd`
 cd $(dirname $0)
-mvn -q -s settings.xml -Dforge.modules.root="$MODULES_ROOT" deploy
+set -o pipefail
+mvn -s settings.xml -Dforge.modules.root="$MODULES_ROOT" -Dmaven.skip.install deploy | egrep --color=never "(^\[WARNING\]|^\[ERROR\])"
+
