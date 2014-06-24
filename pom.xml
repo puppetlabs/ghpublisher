@@ -22,7 +22,7 @@
 				<configuration>
 					<enablePuppetLintValidation>false</enablePuppetLintValidation>
 					<cacheLocation>${project.build.directory}/forgeCache</cacheLocation>
-					<serviceURL>https://forge-apilb01-stage.puppetlabs.com/</serviceURL>
+					<serviceURL>https://forgestagingapi.puppetlabs.com/</serviceURL>
 				</configuration>
 			</plugin>
 		</plugins>
