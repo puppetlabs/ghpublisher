@@ -21,6 +21,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<enablePuppetLintValidation>false</enablePuppetLintValidation>
+					<checkModuleSemantics>true</checkModuleSemantics>
 					<cacheLocation>${project.build.directory}/forgeCache</cacheLocation>
 					<serviceURL>https://forgestagingapi.puppetlabs.com/</serviceURL>
 				</configuration>
