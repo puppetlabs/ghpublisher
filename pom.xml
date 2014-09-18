@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>puppetlabs</groupId>
 	<artifactId>ghpublisher</artifactId>
-	<version>1.2.0</version>
+	<version>1.3.0</version>
 	<packaging>puppet-module</packaging>
 	<name>ghpublisher</name>
 
@@ -17,10 +17,12 @@
 			<plugin>
 				<groupId>com.puppetlabs.geppetto</groupId>
 				<artifactId>forge-maven-plugin</artifactId>
-				<version>4.2.0</version>
+				<version>4.3.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<enablePuppetLintValidation>false</enablePuppetLintValidation>
+					<missingForgeRequiredFields>ERROR</missingForgeRequiredFields>
+					<checkModuleSemantics>true</checkModuleSemantics>
 					<cacheLocation>${project.build.directory}/forgeCache</cacheLocation>
 				</configuration>
 			</plugin>
